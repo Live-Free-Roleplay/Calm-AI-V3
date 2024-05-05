@@ -10,12 +10,16 @@
 SetRelationshipBetweenGroups(1, GetHashKey('PLAYER'), GetHashKey('PLAYER'))
 
 -- CIVMALE relationships
-SetRelationshipBetweenGroups(1, GetHashKey('CIVMALE'), GetHashKey('CIVMALE'))
-SetRelationshipBetweenGroups(1, GetHashKey('CIVMALE'), GetHashKey('CIVFEMALE'))
+SetRelationshipBetweenGroups(2, GetHashKey('CIVMALE'), GetHashKey('CIVMALE'))
+SetRelationshipBetweenGroups(2, GetHashKey('CIVMALE'), GetHashKey('CIVFEMALE'))
+SetRelationshipBetweenGroups(1, GetHashKey('PLAYER'), GetHashKey('CIVMALE'))
+SetRelationshipBetweenGroups(1, GetHashKey('CIVMALE'), GetHashKey('PLAYER'))
 
 -- CIVFEMALE relationships
-SetRelationshipBetweenGroups(1, GetHashKey('CIVFEMALE'), GetHashKey('CIVFEMALE'))
-SetRelationshipBetweenGroups(1, GetHashKey('CIVFEMALE'), GetHashKey('CIVMALE'))
+SetRelationshipBetweenGroups(2, GetHashKey('CIVFEMALE'), GetHashKey('CIVFEMALE'))
+SetRelationshipBetweenGroups(2, GetHashKey('CIVFEMALE'), GetHashKey('CIVMALE'))
+SetRelationshipBetweenGroups(1, GetHashKey('PLAYER'), GetHashKey('CIVFEMALE'))
+SetRelationshipBetweenGroups(1, GetHashKey('CIVFEMALE'), GetHashKey('PLAYER'))
 
 -- COP relationships
 SetRelationshipBetweenGroups(1, GetHashKey('COP'), GetHashKey('MEDIC'))
